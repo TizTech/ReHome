@@ -58,7 +58,7 @@ export function Modal({ isOpen, onClose, title, children, className }: ModalProp
         )}
         onClick={(e) => e.stopPropagation()}
       >
-        {(title || onClose) && (
+        {title !== undefined && (
           <div className="flex items-center justify-between p-6 border-b border-border">
             {title && (
               <h2 id="modal-title" className="text-xl font-semibold text-text">

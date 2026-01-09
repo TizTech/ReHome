@@ -67,7 +67,7 @@ export function Drawer({
         aria-modal="true"
         aria-labelledby={title ? 'drawer-title' : undefined}
       >
-        {(title || onClose) && (
+        {title !== undefined && (
           <div className="sticky top-0 z-10 flex items-center justify-between p-4 bg-surface border-b border-border backdrop-blur-sm">
             {title && (
               <h2 id="drawer-title" className="text-lg font-semibold text-text">

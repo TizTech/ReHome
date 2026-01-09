@@ -1,13 +1,14 @@
-import { ReactNode } from 'react'
+import { ReactNode, ButtonHTMLAttributes } from 'react'
 import { cn } from '../../lib/utils'
 
-interface BadgeProps {
+interface BadgeProps extends Omit<ButtonHTMLAttributes<HTMLSpanElement>, 'onClick'> {
   children: ReactNode
   variant?: 'default' | 'success' | 'warning' | 'info'
   className?: string
+  onClick?: () => void
 }
 
-export function Badge({ children, variant = 'default', className }: BadgeProps) {
+export function Badge({ children, variant = 'default', className, onClick, ...props }: BadgeProps) {
   const variants = {
     default: 'bg-surface-2 text-text border border-border',
     success: 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 border-green-300 dark:border-green-700',
@@ -20,8 +21,11 @@ export function Badge({ children, variant = 'default', className }: BadgeProps) 
       className={cn(
         'inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border transition-colors',
         variants[variant],
+        onClick && 'cursor-pointer',
         className
       )}
+      onClick={onClick}
+      {...props}
     >
       {children}
     </span>

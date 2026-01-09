@@ -1,6 +1,5 @@
 import { SortOption } from '../../types'
 import { useListingsStore } from '../../store/listingsStore'
-import { Input } from '../ui/Input'
 
 const SORT_OPTIONS: { value: SortOption; label: string }[] = [
   { value: 'newest', label: 'Newest first' },

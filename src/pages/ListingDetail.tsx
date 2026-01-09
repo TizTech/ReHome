@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom'
-import { ArrowLeft, MapPin, Calendar, Copy, Mail, Phone, Instagram, Edit, Trash2, Flag } from 'lucide-react'
+import { ArrowLeft, MapPin, Mail, Phone, Instagram, Edit, Trash2, Flag } from 'lucide-react'
 import { useListingsStore } from '../store/listingsStore'
 import { formatDate, formatPricePerWeek, formatCurrency } from '../lib/format'
 import { Card } from '../components/ui/Card'
@@ -11,7 +11,7 @@ import { useState } from 'react'
 export function ListingDetail() {
   const { id } = useParams<{ id: string }>()
   const navigate = useNavigate()
-  const { listings, deleteListing, updateListing } = useListingsStore()
+  const { listings, deleteListing } = useListingsStore()
   const [showDeleteModal, setShowDeleteModal] = useState(false)
   const [showReportModal, setShowReportModal] = useState(false)
   const [copied, setCopied] = useState(false)

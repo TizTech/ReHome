@@ -5,7 +5,6 @@ import { formatDate, formatPricePerWeek } from '../../lib/format'
 import { Card } from '../ui/Card'
 import { Badge } from '../ui/Badge'
 import { Button } from '../ui/Button'
-import { useListingsStore } from '../../store/listingsStore'
 
 interface ListingCardProps {
   listing: Listing
@@ -13,7 +12,6 @@ interface ListingCardProps {
 
 export function ListingCard({ listing }: ListingCardProps) {
   const navigate = useNavigate()
-  const { updateListing } = useListingsStore()
   
   const hasIncentive = 
     listing.incentives.cashbackAmount !== undefined ||
