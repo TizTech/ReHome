@@ -35,7 +35,7 @@ export function Layout({ children }: LayoutProps) {
           <div className="flex items-center justify-between h-16">
             <Link to="/" className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-lg bg-accent flex items-center justify-center">
-                <span className="text-white font-bold text-lg">R</span>
+                <span className="text-background font-bold text-lg">R</span>
               </div>
               <span className="text-xl font-bold text-text">ReHome</span>
             </Link>
@@ -92,8 +92,8 @@ export function Layout({ children }: LayoutProps) {
                 </Link>
               </div>
             </div>
-            <div className="text-xs text-text-muted">
-              © 2024 ReHome — Student Tenancy Takeover Marketplace
+            <div className="text-xs text-text-muted text-center">
+              © 2026 ReHome • An Entity of <span className="font-[600]" style={{ fontFamily: "'Clash Display', -apple-system, sans-serif", fontWeight: 600 }}>The Tizzle Collective</span>
             </div>
           </div>
         </div>
