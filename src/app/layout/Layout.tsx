@@ -93,7 +93,7 @@ export function Layout({ children }: LayoutProps) {
               </div>
             </div>
             <div className="text-xs text-text-muted text-center">
-              © 2026 ReHome • An Entity of <span className="font-[600]" style={{ fontFamily: "'Clash Display', -apple-system, sans-serif", fontWeight: 600 }}>The Tizzle Collective</span>
+              © {new Date().getFullYear()} ReHome • An Entity of <span className="font-[600]" style={{ fontFamily: "'Clash Display', -apple-system, sans-serif", fontWeight: 600 }}>The Tizzle Collective</span>
             </div>
           </div>
         </div>
